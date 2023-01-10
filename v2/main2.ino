@@ -56,7 +56,9 @@ void setup() {
   analogReadResolution(10);
 
   // Initialize emon library (30 = calibration number)
-  emon1.current(ADC_INPUT, 30);
+  // 60.6 for 100:50mA
+  // 28 for 30V/1V
+  emon1.current(ADC_INPUT, 60.6);
 
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid, password);
